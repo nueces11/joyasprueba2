@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Carrito de Productos de Joyas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2E4052;
+            padding: 10px;
+            color: #FFFFFF;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        main {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .cart-container {
+            width: 70%;
+            margin: auto;
+            background-color: #FFFFFF;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #E0E0E0;
+            padding: 10px 0;
+        }
+
+        .product-info {
+            flex-grow: 1;
+            margin-left: 20px;
+        }
+
+        .product-info h3 {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        .product-info p {
+            margin: 5px 0;
+        }
+
+        .go-back-btn {
+            background-color: #2E4052;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-top: 10px;
+            order: -1; /* Cambia el orden de visualización */
+        }
+
+        .go-back-btn:hover {
+            background-color: #1D2D3A;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #2E4052;
+            color: #FFFFFF;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button class="go-back-btn" onclick="goBack()"><i class="fas fa-arrow-left"></i> Volver</button>
+        <h1>Carrito de Productos</h1>
+    </header>
+
+    <main>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Carrito de Joyas!</p>
+    </footer>
+
+    <script>
+        function goBack() {
+            // Función para volver a la página anterior (index.html)
+            window.location.href = 'catalogo.html';
+        }
+    </script>
+</body>
+
+</html>
+
+
+

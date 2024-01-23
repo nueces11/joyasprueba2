@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu tienda de joyas RC</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: #2E4052;
+        }
+
+        header {
+            background-color: #456990;
+            padding: 10px;
+            transition: background-color 0.3s;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #FFC857;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #backButton {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        body.menu-open {
+            padding-top: 80px;
+        }
+
+        #productFrame {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 90%;
+            max-width: 1000px; /* Limita el ancho máximo del marco */
+            height: 500px;
+            background-color: #333;
+            overflow-y: auto;
+            border-top-left-radius: 10px;
+            box-shadow: -2px -2px 10px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start; /* Ajustado para que las imágenes tengan suficiente espacio */
+            padding: 10px;
+        }
+
+        .product {
+            width: calc(33.33% - 20px);
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #555;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 5px;
+            box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+        }
+
+        .product:hover {
+            background-color: #555;
+        }
+
+        .product img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+
+        @media (max-width: 600px) {
+            #productFrame {
+                width: 100%;
+                height: auto;
+                padding: 5px;
+                align-items: center;
+            }
+
+            .product {
+                width: calc(50% - 10px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <button id="backButton" onclick="goBack()">Volver</button>
+        <h1>Tu Tienda de Joyas Rancagua</h1>
+    </header>
+
+    <script>
+        function goBack() {
+            window.location.href = 'catalogo.html';
+        }
+
+        window.onscroll = function () {
+            const header = document.querySelector('header');
+            const body = document.body;
+
+            if (window.scrollY > 50) {
+                header.classList.add('fixed');
+                body.classList.add('menu-open');
+            } else {
+                header.classList.remove('fixed');
+                body.classList.remove('menu-open');
+            }
+        };
+    </script>
+
+    <div id="productFrame">
+        <div class="product" onclick="goToProduct('producto1.html')">
+            <img src="cadenadeplata2.jpg" alt="Producto 1" style="width: 100%; max-width: 300px; height: 200px;">
+            <p>Cadena Grumet</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto2.html')">
+            <img src="cadenaespiga.jpg" alt="Producto 2" style="width: 100%; max-width: 300px; height: 200px;">
+            <p>Cadena Espiga</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto3.html')">
+            <img src="https://picsum.photos/id/1018/300/200" alt="Producto 3">
+            <p>Producto 3</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto4.html')">
+            <img src="https://picsum.photos/id/1020/300/200" alt="Producto 4">
+            <p>Producto 4</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto5.html')">
+            <img src="https://picsum.photos/id/1024/300/200" alt="Producto 5">
+            <p>Producto 5</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto6.html')">
+            <img src="https://picsum.photos/id/1027/300/200" alt="Producto 6">
+            <p>Producto 6</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto7.html')">
+            <img src="https://picsum.photos/id/1032/300/200" alt="Producto 7">
+            <p>Producto 7</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto8.html')">
+            <img src="https://picsum.photos/id/1035/300/200" alt="Producto 8">
+            <p>Producto 8</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto9.html')">
+            <img src="https://picsum.photos/id/1038/300/200" alt="Producto 9">
+            <p>Producto 9</p>
+        </div>
+        <div class="product" onclick="goToProduct('producto10.html')">
+            <img src="https://picsum.photos/id/1040/300/200" alt="Producto 10">
+            <p>Producto 10</p>
+        </div>
+        <!-- Agrega más productos según sea necesario -->
+    </div>
+
+    <script>
+        function goToProduct(productURL) {
+            window.location.href = productURL;
+        }
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+

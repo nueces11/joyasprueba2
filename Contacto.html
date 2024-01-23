@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contactos - Tienda de Joyas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+
+        header {
+            background-color: #3498db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            font-family: 'Georgia', serif;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .contact-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .social-icons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            width: 200px;
+        }
+
+        .social-icon {
+            font-size: 24px;
+            color: #3498db;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        /* Nueva regla de estilo para el botón "Volver" */
+        #volver-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #2E4052;
+            color: #FFFFFF;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #volver-btn:hover {
+            background-color: #1D2D3A;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="volver-btn" onclick="goBack()"><i class="fas fa-arrow-left"></i> Volver</button>
+
+    <header>
+        <h1>Contactos - Tienda de Joyas</h1>
+    </header>
+
+    <main>
+        <div class="contact-container">
+            <div class="contact-info">
+                <h2>Dirección:</h2>
+                <p>Calle Principal, Ciudad, País</p>
+
+                <h2>Teléfono:</h2>
+                <p>+123 456 789</p>
+
+                <h2>Email:</h2>
+                <p>info@tutiendadejoyas.com</p>
+            </div>
+
+            <div class="social-icons">
+                <i class="fab fa-instagram social-icon" onclick="openLink('https://www.instagram.com/')"></i>
+                <i class="fab fa-facebook-f social-icon" onclick="openLink('https://www.facebook.com/')"></i>
+                <i class="fab fa-whatsapp social-icon" onclick="openLink('https://wa.me/964947231')"></i>
+            </div>
+        </div>
+    </main>
+
+    
+    <script>
+        function openLink(url) {
+            window.open(url, '_blank');
+        }
+
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+</body>
+
+</html>
+
